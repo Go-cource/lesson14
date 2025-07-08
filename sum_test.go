@@ -2,6 +2,11 @@ package main
 
 import "testing"
 
+func TestSumOld(t *testing.T) {
+	if sum := Sum(1, 2); sum != 3 {
+		t.Errorf("sum expected to be 3; got %d", sum)
+	}
+}
 func TestSum(t *testing.T) {
 	tests := []struct { // добавляем слайс тестов
 		name   string
