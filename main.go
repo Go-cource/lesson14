@@ -1,14 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-func Sum(values ...int) int {
-	var sum int
-	for _, v := range values {
-		sum += v
-	}
-	return sum
-}
 func main() {
-	fmt.Println(Sum(1, 2, 3))
+	v := Abs(3)
+	fmt.Println(v)
+}
+
+// Abs возвращает абсолютное значение.
+// Например: 3.1 => 3.1, -3.14 => 3.14, -0 => 0.
+func Abs(value float64) float64 {
+	return math.Abs(value)
 }
