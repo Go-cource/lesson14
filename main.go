@@ -1,21 +1,13 @@
 package main
-
 import (
-	"fmt"
-	"math"
+"fmt"
+"os"
+"bufio"
 )
-
-func main() {
-	v := Abs(3)
-	fmt.Println(v)
-}
-
-// Abs возвращает абсолютное значение.
-// Например: 3.1 => 3.1, -3.14 => 3.14, -0 => 0.
-func Abs(value float64) float64 {
-	return math.Abs(value)
-}
-
-func RetTrue() bool {
-	return true
+func main () {
+	q:=bufio.NewReader(os.Stdin)
+	fmt.Println("Введите формулу: ")
+	input, _ := q.ReadString('\n')
+	fmt.Println("Скобки расставлены верно: ", %d, "открывающиеся", %d "закрывающиеся", )
+	fmt.Println("Скобки расставлены неправильно: ", %d, "открывающиеся", %d "закрывающиеся", )
 }
