@@ -6,7 +6,12 @@ import (
 )
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Succes request"))
+	if r.Method == http.MethodPost {
+		w.Write([]byte("Succes POST request"))
+	} else if r.Method == http.MethodGet {
+		w.Write([]byte(`{"status": "Succes Get"}`))
+	}
+
 }
 
 func main() {
